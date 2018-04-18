@@ -56,11 +56,11 @@
             </div>
           </li>
           {{pass}}
-          {{pass}}          
+          {{pass}}
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        </form>      
+        </form>
         {{if 'auth' in globals():}}
         <ul class="navbar-nav navbar-right">
           <li class="nav-item dropdown">
@@ -79,12 +79,12 @@
               {{pass}}
             </div>
           </li>
-        </ul>        
+        </ul>
         {{pass}}
       </div>
     </nav>
 
-    <!-- Masthead ===================================== -->    
+    <!-- Masthead ===================================== -->
     {{block header}}
     {{end}}
     <!-- Main ========================================= -->
@@ -96,9 +96,15 @@
         {{end}}
         {{=response.toolbar() if configuration.get('app.toolbar') else ''}}
       </div>
+
+        <form action="/action"> First name: <input type="text" name="FirstName" value="Mickey"> <br>
+
+            Last Name: <input type="text" name="Lastname" value="Mouse"> <br>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 
-    {{block footer}} <!-- this is default footer -->      
+    {{block footer}} <!-- this is default footer -->
     <footer class="footer">
       <div class="container-fluid">
         <div class="copyright pull-left">{{=T('Copyright')}} &#169; {{=request.now.year}}</div>
