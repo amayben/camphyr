@@ -3,6 +3,13 @@
 # This is a sample controller
 # this file is released under public domain and you can use without limitations
 # -------------------------------------------------------------------------
+# ---- INSERTED FUNCTION FOR FORM ---
+
+def display_form():
+   form=FORM('Your name:', INPUT(_name='name'), INPUT(_type='submit'))
+   return dict(form=form)
+
+
 
 # ---- example index page ----
 def index():
