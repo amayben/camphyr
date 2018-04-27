@@ -24,9 +24,30 @@ ADD SNIPPET HERE.
 <input type="submit" maxlength="200" width="100" height="100" />
 
 </form>
-<h3>Submitted variables</h3>
+
 {{=BEAUTIFY(request.vars)}}
 {{db.story.insert(title=request.vars.title, snippets=request.vars.snippet )}}
+
+
+{{for s in stories:}}
+{{if s.title is not None:}}
+        <div class="memo">
+            <h3>Story title:</h3>
+            <div class="memo_title">
+                {{=s.title}}
+            </div>
+            <h4>Content:</h4>
+            {{=s.snippets}}
+            <br>
+            <br>
+            <br>
+        </div>
+{{pass}}
+{{pass}}
+
+{{if not stories:}}
+        <p> Currently no stories. </p>
+{{pass}}
 
 
 {{elif 'content' in globals():}}
@@ -37,16 +58,3 @@ ADD SNIPPET HERE.
 
 
 
-{{for s in stories:}}
-
-        <div class="memo">
-            <h2>Story:</h2>
-            <div class="memo_title">
-                {{=s.title}}
-            </div>
-        </div>
-{{pass}}
-
-{{if not stories:}}
-        <p> Currently no stories. </p>
-{{pass}}
