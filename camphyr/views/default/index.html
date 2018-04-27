@@ -1,9 +1,7 @@
 {{extend 'layout.html'}}
 
 {{block header}}
-<center style="background-color: #333; color:white; padding:30px">
-  <h1>/{{=request.application}}/{{=request.controller}}/{{=request.function}}
-</center>
+
 {{end}}
 
 {{if 'message' in globals():}}
@@ -13,6 +11,11 @@
 <h1>Snippet</h1>
 <form enctype="multipart/form-data"
       action="{{=URL()}}" method="post">
+<textarea name="title" rows="2" cols="50" maxlength="2500">
+ADD TITLE HERE.
+</textarea>
+<br>
+<br>
 
 <textarea name="snippet" rows="4" cols="50" maxlength="2500">
 ADD SNIPPET HERE.
@@ -23,20 +26,9 @@ ADD SNIPPET HERE.
 </form>
 <h3>Submitted variables</h3>
 {{=BEAUTIFY(request.vars)}}
+{{db.story.insert(title=request.vars.title, snippets=request.vars.snippet )}}
 
 
-<center style="padding:50px">
-  <a class="btn btn-primary" href="{{=URL('admin','default','index')}}">
-    <i class="glyphicon glyphicon-cog"></i>
-    {{=T("admin")}}
-  </a>
-  <a class="btn btn-secondary" href="{{=URL('examples','default','index')}}">{{=T("Online examples")}}</a>
-  <a class="btn btn-secondary" href="http://web2py.com">web2py.com</a>
-  <a class="btn btn-secondary" href="http://web2py.com/book">{{=T('Documentation')}}</a>
-  <a class="btn btn-secondary" href="{{=URL('default','api_get_user_email')}}">{{=T('API Example')}}</a>
-  <a class="btn btn-secondary" href="{{=URL('default','grid/auth_user')}}">{{=T('Grid Example')}}</a>
-  <a class="btn btn-secondary" href="{{=URL('default','wiki')}}">{{=T('Wiki Example')}}</a>
-</center>
 {{elif 'content' in globals():}}
 {{=content}}
 {{else:}}
@@ -45,3 +37,16 @@ ADD SNIPPET HERE.
 
 
 
+{{for s in stories:}}
+
+        <div class="memo">
+            <h2>Story:</h2>
+            <div class="memo_title">
+                {{=s.title}}
+            </div>
+        </div>
+{{pass}}
+
+{{if not stories:}}
+        <p> Currently no stories. </p>
+{{pass}}

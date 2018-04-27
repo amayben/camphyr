@@ -4,37 +4,52 @@
 # this file is released under public domain and you can use without limitations
 # -------------------------------------------------------------------------
 # ---- INSERTED FUNCTION FOR FORM ---
-
 def display_form():
-   form=FORM('Your name:', INPUT(_name='name'), INPUT(_type='submit'))
-   return dict(form=form)
+    form = FORM('Your name:', INPUT(_name='name'), INPUT(_type='submit'))
+    return dict(form=form)
 
+
+# add a story
+def add_story():
+
+    form = SQLFORM(db.story)
+    if form.process().accepted:
+        session.flash = T("Story has been added.")
+    elif form.errors:
+        session.flash = T("ERROR: Story has not been added. ")
+    return dict(form=form)
 
 
 # ---- example index page ----
 def index():
-    response.flash = T("Hello World")
-    return dict(message=T('Welcome to web2py!'))
+    # make this different later:
+    # if auth.user if not None:
+    stories = db(db.story.is_public).select()  # type: string?
+    return dict(message=T('Welcome to Camphyr!'), stories=stories)
+
 
 # ---- API (example) -----
 @auth.requires_login()
 def api_get_user_email():
     if not request.env.request_method == 'GET': raise HTTP(403)
-    return response.json({'status':'success', 'email':auth.user.email})
+    return response.json({'status': 'success', 'email': auth.user.email})
+
 
 # ---- Smart Grid (example) -----
-@auth.requires_membership('admin') # can only be accessed by members of admin groupd
+@auth.requires_membership('admin')  # can only be accessed by members of admin groupd
 def grid():
-    response.view = 'generic.html' # use a generic view
+    response.view = 'generic.html'  # use a generic view
     tablename = request.args(0)
     if not tablename in db.tables: raise HTTP(403)
     grid = SQLFORM.smartgrid(db[tablename], args=[tablename], deletable=False, editable=False)
     return dict(grid=grid)
 
+
 # ---- Embedded wiki (example) ----
 def wiki():
-    auth.wikimenu() # add the wiki to the menu
-    return auth.wiki() 
+    auth.wikimenu()  # add the wiki to the menu
+    return auth.wiki()
+
 
 # ---- Action for login/register/etc (required for auth) -----
 def user():
@@ -54,6 +69,7 @@ def user():
     also notice there is http://..../[app]/appadmin/manage/auth to allow administrator to manage users
     """
     return dict(form=auth())
+
 
 # ---- action to server uploaded static content (required) ---
 @cache.action()
