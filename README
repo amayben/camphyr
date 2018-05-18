@@ -1,28 +1,22 @@
 I think I put comments next to everything thats new. If you have any questions
 just shoot em my way (or whatever that phrase is)
 
-NOTE: prepare to get tired of the word "stuff"
-
 LIST OF CHANGES (summary, comments in files are more specific)
+(in files, new stuff starts with 'new' and ends with 'end')
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--css/camphyr.css
-	- everything in here
-
--table.py
-	-added head, num_snippets fields
-
 -default.py
-	- added stuff for incrementing snippet counter, some stuff for the 
-	  db.story.insert part
-	-added stuff doing with usernames and stuff in return
-
--index.html
-	-added some stuff db.story.insert part
-
--sample_story_page.html
-	-pretty much everything js related is new
-	-some more stuff doing with usernames
-	-everything button related
+	-testing_page (this is what is going into the bio page)
+	-create_story
+	-story
+-create_story.html
+	-everything
+-story.html
+	-everything
+-testing_page
+	-everything
+-css/style.css
+	-replaces camphyr.css
+-layout.html
+	-replaced <link href=".../>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Yea, I think thats everything
