@@ -1,60 +1,60 @@
-# camphyr
+# Camphyr
 Team: Camphyr
 
 
-Group Members:
-	- Nicole Kyriakopoulos (nkyriako@ucsc.edu)
-	- Raymond Mai (rlmai@ucsc.edu)
-	- Kirby Lam (klam18@ucsc.edu)
-	- Michelle Meng (mimeng@ucsc.edu)
-	- Alexander Mayben (amayben@ucsc.edu)
+Group Members:  
+- Nicole Kyriakopoulos (nkyriako@ucsc.edu)    
+- Raymond Mai (rlmai@ucsc.edu)  
+- Kirby Lam (klam18@ucsc.edu)  
+- Michelle Meng (mimeng@ucsc.edu)  
+- Alexander Mayben (amayben@ucsc.edu)  
 
 
-Files included:
-	- "Burnup Charts"    (directory)
-	- "Scrum Boards"     (directory)
-	- "Sprint Plans"     (directory)
-	- "Sprint Reports"   (directory)
-	- "Testing"	     (directory)
-	     Contains:
-		-Sprint 3 and 4 Acceptance Criteria
-		-System and Unit Test Report
-		-Testing
-	- "Working Prototype"(directory)
-	     Contains:
-		-Working prototype: "Camphyr.w2p"
-		-Team Working Agreement
-		-User Manual
-		-Working Prototype Known Problems
-	- ìREADME.mdî
+Files included:  
+- "Burnup Charts"    (directory)  
+- "Scrum Boards"     (directory)  
+- "Sprint Plans"     (directory)  
+- "Sprint Reports"   (directory)  
+- "Testing"	     (directory)  
+  - Contains:  
+    - Sprint 3 and 4 Acceptance Criteria  
+    - System and Unit Test Report  
+    - Testing  
+- "Working Prototype"(directory)  
+  - Contains:  
+    - Working prototype: "Camphyr.w2p"  
+    - Team Working Agreement  
+    - User Manual  
+    - Working Prototype Known Problems  
+    - ‚ÄúREADME.md‚Äù  
 	
 	
 Description: 
-	Our site exists to give prospective writers the opportunity to flex their creative muscles and get
+Our site exists to give prospective writers the opportunity to flex their creative muscles and get
 familiar with telling stories, without needing to deal with the legwork of completing every single idea they may
 have as they write them.  This site also lets other users add onto stories with their own ideas, continuing a story
-that another user has left unfinished.  Every addition ìlinkî in a story posted to Camphyr is known as a ìsnippetî;
-itís a finite bit of text that serves to develop an unfinished story further. With Camphyr, the stories themselves 
+that another user has left unfinished.  Every addition ‚Äúlink‚Äù in a story posted to Camphyr is known as a ‚Äúsnippet‚Äù;
+it‚Äôs a finite bit of text that serves to develop an unfinished story further. With Camphyr, the stories themselves 
 are collections of snippets; every set of snippets is unique to every story.
 	
 	
 Key Features: 	
-	- Adding new stories: simply type in a title and the text of what you want your first snippet to
-say, and click the ìsubmitî button.  You will be redirected to your story page.
-	- Searching for stories: Using the search bar on the main index page when logged in, type in a few
-words that describe what youíre looking for, then click the ìSearchî button.
-	- Adding snippets to existing stories: At the bottom of the story page is a text box; to add your snippet,
+- Adding new stories: simply type in a title and the text of what you want your first snippet to
+- say, and click the ‚Äúsubmit‚Äù button.  You will be redirected to your story page.
+- Searching for stories: Using the search bar on the main index page when logged in, type in a few
+words that describe what you‚Äôre looking for, then click the ‚ÄúSearch‚Äù button.
+- Adding snippets to existing stories: At the bottom of the story page is a text box; to add your snippet,
 write your text in the text box to continue the story further, then click "submit."
-	- User Profile: When logged in, the index page has a button that allows you to visit your profile. 
-	- Standalone Stories: Stories you write only posted onto your profile. Click on the ìadd storyî button, 
-write a title and your storyís text, and hit ìsubmitî.
+- User Profile: When logged in, the index page has a button that allows you to visit your profile. 
+- Standalone Stories: Stories you write only posted onto your profile. Click on the ‚Äúadd story‚Äù button, 
+write a title and your story‚Äôs text, and hit ‚Äúsubmit‚Äù.
 	
 	
 To set up the Web2Py server: 
 	
 	1. Navigate to the website http://web2py.com/init/default/download.
 	2. For Mac users:
-		Click on the file "For Mac"
+		Click on the file "For Mac
 		The download should begin automatically
 		Unzip the zip file that was just downloaded
 		Double click on the web2py application
@@ -70,11 +70,11 @@ To set up the Web2Py server:
 	This sets up the server in the web2py framework
 
 To access the app:
-	1. Open the browser while the server is running 
-	2. Connect to Web2Py via the server and port number specified on the Web2Py command line, OR, more conveniently,
-	3. The Web2Py software asks for a password (for the admin) and automatically opens the app when starting the server.
-	4. Log in with an admin password 
-	5. Go to the ìMy Sitesî tab. We now need to unpack the camphyr app to view.
-	6. On the right side of the page, there is an upload button to unpack your environment.
-	7. Select ìCamphyr.w2pî from your files and give the app the name "Camphyr". The page will update and you will see a link to the camphyr site.
-	8. Click on the link to access the home page of the app as a client.
+1. Open the browser while the server is running 
+2. Connect to Web2Py via the server and port number specified on the Web2Py command line, OR, more conveniently,
+3. The Web2Py software asks for a password (for the admin) and automatically opens the app when starting the server.
+4. Log in with an admin password 
+5. Go to the ‚ÄúMy Sites‚Äù tab. We now need to unpack the camphyr app to view.
+6. On the right side of the page, there is an upload button to unpack your environment.
+7. Select ‚ÄúCamphyr.w2p‚Äù from your files and give the app the name "Camphyr". The page will update and you will see a link to the camphyr site.
+8. Click on the link to access the home page of the app as a client.
