@@ -1,4 +1,4 @@
-# Camphyr
+﻿# Camphyr
 Team: Camphyr
 
 
@@ -11,7 +11,8 @@ Group Members:
 
 
 Files included:  
-- "Burnup Charts"    (directory)  
+- "Burnup Charts"    (directory)
+- "Release 1.0"      (directory)  
 - "Scrum Boards"     (directory)  
 - "Sprint Plans"     (directory)  
 - "Sprint Reports"   (directory)  
